@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <div class="toolBar">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Show Filters
+      </button>
+    </div>
+
+    <div class="toolBar" (click) = "homeMethod()">Home</div>
+    <div class="toolBar" (click) = "productMethod()">Products</div>
+    <div class="toolBar" (click) = "aboutMethod()">About</div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <mat-list role="list">
+        <mat-list-item role="listitem"><mat-card>Header</mat-card></mat-list-item>
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+    </mat-drawer>
+
+    <mat-grid-list class="grid" cols="3" rowHeight="2:1">
+        <angular-image-slider  [images]="imagesUrl"></angular-image-slider>
+        <!-- <mat-grid-tile><mat-card class="imageGrid">1</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">2</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">3</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">4</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">5</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">6</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">7</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">8</mat-card></mat-grid-tile>
+        <mat-grid-tile><mat-card class="imageGrid">9</mat-card></mat-grid-tile> -->
+
+      </mat-grid-list>
+
+
+  </mat-drawer-container>

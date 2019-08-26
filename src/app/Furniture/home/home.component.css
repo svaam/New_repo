@@ -1,0 +1,27 @@
+.toolBar{
+    margin: 0px 5px 0px 5px;
+    background-color: blueviolet;
+}
+.example-container {
+    width: 1400px;
+    height: 1000px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 50px;
+  }
+
+  mat-card{
+    padding: 20% 30%;
+  }
+  .grid{
+    margin-top: 5%;
+  }

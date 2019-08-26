@@ -1,0 +1,33 @@
+    <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+    <main>
+        <mat-card>
+            <form (submit)="getPost(formField)" #formField="ngForm">
+                <mat-form-field>
+                    <input matInput 
+                            placeholder="Post Title"
+                            name="title"
+                            ngModel
+                            required
+                            minlength="3"
+                            #title="ngModel">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <textarea matInput
+                           placeholder="Post Content"
+                           name="content"
+                           ngModel
+                           required
+                           minlength="3"
+                           #content="ngModel"></textarea>
+                  </mat-form-field>
+            <button mat-raised-button
+                    type="submit">Save Post</button>
+          </form>
+          </mat-card>
+    </main>
+          
