@@ -1,27 +1,12 @@
 <mat-toolbar class="navbar"> 
   <div>
-      <mat-icon aria-hidden="false" aria-label="home" routerLink="/home">home</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="home" (click) = 'goToHome()'>home</mat-icon>
   </div>
-  <div>
+  <div *ngFor = 'let button of Item'>
       <span>
-          <button mat-button >Bed</button>
-        </span>
-        <span>  
-          <button mat-button >Sofa</button>
-        </span>
-        <span>
-          <button mat-button>Dinning</button>
-        </span>
-        <span>
-          <button mat-button >Chair</button>
-        </span>
+          <button mat-button (click) = 'getHeaderValue(button.value)'>{{ button.name }}</button>
+      </span>
   </div>
   <div>
-  <span>
-    <button mat-button>About</button>
-  </span>
-  <span>  
-    <button mat-button routerLink="/contactus">ContactUs</button>
-  </span>
 </div>
 </mat-toolbar>

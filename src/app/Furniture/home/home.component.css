@@ -20,8 +20,25 @@
   }
 
   mat-card{
-    padding: 20% 30%;
+    padding: 15px 35px;
   }
+  .slider{
+    margin-top: 3%;
+  }
+
   .grid{
-    margin-top: 5%;
+    margin-top: 10%;
+  }
+
+  .imageGrid{
+    background-color: rgb(249, 247, 238);
+    margin-right: 35%;
+  }
+  mat-grid-list{
+    margin-top: 25%;
+  }
+  .seeMoreLabel{
+    text-align: center;
+    margin-top: 2%;
+    cursor: pointer;
   }

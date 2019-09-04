@@ -16,6 +16,12 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { SofaComponent } from '../../Item/sofa/sofa.component';
+import { DinningComponent } from '../../Item/dinning/dinning.component';
+import { ChairComponent } from '../../Item/chair/chair.component';
+import { BedComponent } from '../../Item/bed/bed.component';
+import { AboutUsComponent } from '../../Other/about-us/about-us.component';
+import { ContactUsComponent } from '../../Other/contact-us/contact-us.component';
 
 
 
@@ -42,6 +48,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   declarations: [
     HomeComponent,
     HeaderComponent,
+    BedComponent,
+    ChairComponent,
+    DinningComponent,
+    SofaComponent,
+    AboutUsComponent,
+    ContactUsComponent
   ]
 })
 export class FurnitureModule { }

@@ -5,3 +5,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+p{
+    margin: 15%;
+    align-content: center;
+    font-size: 500%;
+}

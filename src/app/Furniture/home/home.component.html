@@ -1,17 +1,3 @@
-<!-- <mat-toolbar color="primary">
-  <mat-toolbar-row>
-
-    <div class="toolBar">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Show Filters
-      </button>
-    </div>
-
-    <div class="toolBar" (click) = "homeMethod()">Home</div>
-    <div class="toolBar" (click) = "productMethod()">Products</div>
-    <div class="toolBar" (click) = "aboutMethod()">About</div>
-  </mat-toolbar-row>
-</mat-toolbar> -->
 
 <app-header></app-header>
 
@@ -25,19 +11,22 @@
       </mat-list>
     </mat-drawer>
 
-    <mat-grid-list class="grid" cols="3" rowHeight="2:1">
-        <angular-image-slider  [images]="imagesUrl"></angular-image-slider>
-        <!-- <mat-grid-tile><mat-card class="imageGrid">1</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">2</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">3</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">4</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">5</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">6</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">7</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">8</mat-card></mat-grid-tile>
-        <mat-grid-tile><mat-card class="imageGrid">9</mat-card></mat-grid-tile> -->
-
+    <div class="grid">
+      <angular-image-slider [images]="imagesUrl"></angular-image-slider>
+    </div>
+    
+    <mat-grid-list class="grid" cols="1" rowHeight="2:1">
+        
+        <mat-grid-tile *ngFor = 'let imageCard of cardImage'>
+          <mat-card class="imageGrid">
+            <div>
+                <img src = "{{ imageCard.value }}" alt="Image Name">
+            </div>
+            <div class="seeMoreLabel">
+                <button mat-button (click) = getImageId(imageCard.name)>See Complete Range</button>
+            </div>
+          </mat-card>
+        </mat-grid-tile>
       </mat-grid-list>
-
 
   </mat-drawer-container>
